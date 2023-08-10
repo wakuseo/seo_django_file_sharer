@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {% block title %}
 Waku-iSoft Image Sharer home page
@@ -6,6 +7,15 @@ Waku-iSoft Image Sharer home page
 {% endblock %}
 
 {% block body %}
-<h1>{{ my_thing }}</h1>
+
+{% for post in posts %}
+    <a href="{% url 'feed:detail' post.pk %}" style="display: inline-block;">
+    {{ post.text }} <br>
+    {% thumbnail post.image "200x200" crop="center" as im %}
+        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+    {% endthumbnail %}
+    </a>
+    <hr>
+{%endfor %}
 
 {%endblock%}
