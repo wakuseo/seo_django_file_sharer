@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.bak
+
+# Virtual environment
+venv/
+env/
+__env__/
+
+# Environment variables
+.env
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.swp
+
+# Media and static files (may vary depending on your setup)
+media/
+static/
+
+# Local development settings (may vary depending on your setup)
+local_settings.py
+
+# IDE and Editor specific files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+
+# Compiled files (may vary depending on your setup)
+*.pyo
+*.pyd
+*.db
+
+# Project-specific ignores
+# /path/to/specific_file_or_directory/
