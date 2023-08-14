@@ -1,5 +1,11 @@
 from django import forms
 
-class PostForm(forms.Form):
-    text = forms.CharField
-    image = forms.CharField
+from .models import Post
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ["image", "text"]
+        labels = {
+            "text": "Description",  # Replace with your desired label
+        }
